@@ -41,6 +41,7 @@
 
       function gu() {
         janken(hand_gu);
+        "janken_gu.png"
       }
 
       function choki() {
@@ -122,20 +123,25 @@
       $(function(){
         newgame();
       })
+
     </script>
 </head>
 <body>
   <h1 class="text-white bg-primary">じゃんけん 連勝チャレンジ！</h1>
   <div id="highscore" class="text-white bg-secondary"></div>
   <div class="mx-auto" style="width: 200px">
-    <a onclick="gu();" class="btn btn-outline-primary hand" role="button">ぐー</a>
-    <a onclick="choki();" class="btn btn-outline-primary hand" role="button">ちょき</a>
-    <a onclick="pa();" class="btn btn-outline-primary hand" role="button">ぱー</a>
+    <a onclick="gu();" class="btn btn-outline-primary hand" role="button"><img src="janken_gu.png"width="30" height="30" text-align:left></a>
+    <a onclick="choki();" class="btn btn-outline-primary hand" role="button"><img src="janken_choki.png"width="30" height="30" text-align:center></a>
+    <a onclick="pa();" class="btn btn-outline-primary hand" role="button"><img src="janken_pa.png"width="30" height="30" text-align:right></a>
     <a onclick="newgame();" class="btn btn-info text-white" id="newgame" role="button">New Game</a>
   </div>
   <div id="result" class="text-white bg-secondary">
   </div>
   <div id="result2" class="bg-warning">
   </div>
+  
+  
+  
+  
 </body>
 </html>
