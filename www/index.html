@@ -41,7 +41,7 @@
 
       function gu() {
         janken(hand_gu);
-        "janken_gu.png"
+        
       }
 
       function choki() {
@@ -50,6 +50,11 @@
 
       function pa() {
         janken(hand_pa);
+      }
+      function saikyo() {
+        win_num++;
+          $("#result2").html(win_num + "連勝!")
+          $("#result").html("おれの勝ちｗ");
       }
 
       function janken(player_hand){
@@ -66,7 +71,7 @@
         if(result == judge_win) {
           win_num++;
           $("#result2").html(win_num + "連勝!")
-        } else {
+        } else if(result == judge_loose){
           gameover();
         }
       }
@@ -133,6 +138,9 @@
     <a onclick="gu();" class="btn btn-outline-primary hand" role="button"><img src="janken_gu.png"width="30" height="30" text-align:left></a>
     <a onclick="choki();" class="btn btn-outline-primary hand" role="button"><img src="janken_choki.png"width="30" height="30" text-align:center></a>
     <a onclick="pa();" class="btn btn-outline-primary hand" role="button"><img src="janken_pa.png"width="30" height="30" text-align:right></a>
+
+    <a onclick="saikyo();" class="btn btn-outline-primary hand" role="button"><img src="saikyo.png"width="90" height="90" text-align:center></a>
+
     <a onclick="newgame();" class="btn btn-info text-white" id="newgame" role="button">New Game</a>
   </div>
   <div id="result" class="text-white bg-secondary">
